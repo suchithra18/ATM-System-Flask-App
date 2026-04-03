@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>Welcome {{ name }}</h2>
+    <h3>Balance: ₹{{ balance }}</h3>
+
+    <form method="POST">
+        <input type="number" name="amount" placeholder="Enter amount" required>
+
+        <button type="submit" name="deposit">Deposit</button>
+        <button type="submit" name="withdraw">Withdraw</button>
+    </form>
+
+    <br>
+    <a href="/logout"><button>Logout</button></a>
+</div>
+
+</body>
+</html>
